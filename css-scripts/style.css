@@ -148,8 +148,10 @@ a{
     padding: 25px 10px;
     height: 100%;
     border: 10px;
-    border-radius: 5px;
+    border-radius: 0px;
+    position: relative;
     transform: translate(0%, -10%);
+    
 }
 model-viewer{
     position: absolute;
@@ -190,16 +192,17 @@ model-viewer{
     width: 100%;
     height: 100%;
     border: 2px solid white;
-    
+    position: relative;
     
 }
 #menuButtons:hover{
     
+    cursor: pointer;
     border-radius: 20px;
     transition: 0.20s;
     width: 100%;
     height: 100%;
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px rgba(10, 10, 10, 0.904);
     border: 3px solid greenyellow;
 }
 #socialMedia{

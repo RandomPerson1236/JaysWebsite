@@ -27,35 +27,60 @@ canvas{
 }
 #downloadButton{
     border: 0px;
-    border-radius: 10px;
+    border-radius: 15px;
     position: relative;
+    text-align: center;
     display: block;
-    width: 25%;
+    width: 20%;
     transform: translate(-0%, 45%);
     margin: 0 auto;
     transition: 0.20s;
+    background-color: rgba(0, 0, 0, 0.37);
+    border: 2px solid rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 180%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
 }
 #downloadButton:hover{
     border: 0px;
     border-radius: 10px;
     position: relative;
     display: block;
-    width: 25%;
+    width: 20%;
     transform: translate(-0%, 45%);
     margin: 0 auto;
-    font-size: 30px;
+    font-size: 200%;
     transition: 0.20s;
+    background-color: rgba(0, 0, 0, 0.486);
+    border: 3px solid greenyellow;
 }
 #backButton1{
-font-size: 50px;
+font-size: 200%;
 border-radius: 18px;
+background-color: rgba(0, 0, 0, 0.37);
 display: block;
+text-align: center;
+text-decoration: none;
+color: white;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 transition: 0.20s;
 }
 #backButton1:hover{
-font-size: 60px;
+font-size: 250%;
 border-radius: 18px;
 transition: 0.20s;
+color: red;
+}
+p{
+    color: white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    position: relative;
+    transform: translate(0%, 100%);
+    display: block;
+    
 }
 </style>
 <body>
@@ -67,6 +92,7 @@ transition: 0.20s;
     
     <model-viewer src="3DModels/M16.glb" camera-controls auto-rotate></model-viewer>
     <h2><a href="Downloads/m16.zip" id="downloadButton" download>Download</a></h2>
+    <p>Pew pew pew pew</p>
 
 </body>
 </html>
