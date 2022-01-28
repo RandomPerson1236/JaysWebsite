@@ -218,3 +218,26 @@ model-viewer{
 ::-webkit-scrollbar-thumb:hover{
     background-color: rgb(190, 101, 28);
 }
+@media only screen and (max-width: 800px) {
+#menuButtons { font-size: 15px }
+#homeLabel{ font-size: 100% }
+#image1{ width: 32% }
+#banner{ width: 130%; transform: translate(0%, -45%); }
+#gamesButton { font-size: 30px; }
+}
+@media only screen and (max-width: 1000px) {
+    #menuButtons { font-size: 20px }
+    #homeLabel{ font-size: 150%; }
+    #image1{ width: 32% }
+    #banner{ width: 100%; transform: translate(0%, -30%); }
+    #gamesButton { font-size: 20px; }
+    #socialMedia { height: 10%; width: 120%; transform: translate(-8%, 0%); }
+}
+@media only screen and (max-width: 500px) {
+    #menuButtons { font-size: 10px }
+    #homeLabel{ font-size: 50%; transform: translate(2%, 175%);}
+    #image1{ width: 32% }
+    #banner{ width: 100%; transform: translate(0%, -70%); }
+    #gamesButton { font-size: 20px; }
+    #socialMedia { height: 10%; width: 120%; transform: translate(-8%, 0%); }
+}
