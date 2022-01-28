@@ -1,3 +1,17 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(27, 27, 27); 
+    background-blend-mode: difference;
+    color: white;
+    font-size: 115%;
+    font-weight: bolder;
+    text-align: center;
+    background-size: 100%;
+    overflow-x: hidden;
+}
 h1 {
 color: whitesmoke;
 background: rgba(17, 17, 17, 0.5);
@@ -6,28 +20,6 @@ font-size: 45px;
 border: 10px;
 border-radius: 10px;
 }
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(to right, rgb(181, 20, 221),rgb(22, 179, 218), rgb(221, 20, 161));
-    background-blend-mode: difference;
-    color: white;
-    font-size: 120%;
-    font-weight: bolder;
-    text-align: center;
-   background-size: 400%;
-   animation: changebg 20s infinite alternate;
-}
-
-@keyframes changebg{
-    0%{
-        background-position: left;
-    }
-    100%{
-        background-position: right;
-    }
-}
-
 p{
     background: rgba(24, 24, 24, 0.075);
     padding-top: 20px;
@@ -36,9 +28,7 @@ p{
     padding-right: 5px;
     border: 10px;
     border-radius: 20px;
-    
 }
-
 a{
     color: white;
     text-decoration: none;
@@ -46,67 +36,37 @@ a{
     background: rgba(14, 14, 14, 0.24);
     padding: 10px;
 }
-
 #logo{
     border-radius: 12px;
     font-size: 30px;
 }
-
-#videoPlayer{
-    background: black;
-    border: 10px solid rgb(12, 12, 12);
+#banner{
+    -webkit-filter: blur(10%);
+    filter: blur(10%); 
+    -webkit-filter: contrast(105%);
+    transform: translate(0%, -30%);
 }
-
 #gamesButton{
     font-size: 30px;
     border-radius: 18px;
-    transition: 0.20s;
-    
-    
+    transition: 0.20s; 
 }
-
 #image1{
-    border: 10px;
-    border-radius: 100px;
+    border: 2px solid rgb(37, 37, 37);
+    border-radius: 20px;
     transition: 0.20s;
     -webkit-filter: blur(1px);
     filter: blur(1px);
-    
-    
+    filter: grayscale(50%);
 }
-
 #image1:hover{
-    border: 0px;
-    border-radius: 20px;
+    border: 2px solid rgb(204, 105, 24);
+    border-radius: 0px;
     transition: 0.20s;
     -webkit-filter: blur(0px);
     filter: blur(0px);
-    
+    filter: grayscale(0%);
 }
-
-#null{
-    border: 0px;
-    padding: 14px, 10px;
-    display: block;
-    background: linear-gradient(to right, rgb(207, 58, 140), rgb(58, 160, 207));
-    border-radius: 24px;
-    font-size: 75%;
-    position: absolute;
-    transform: translate(100%, -130%);
-    color: white;
-    transition: 0.20s;
-    background-size: 400%;
-    animation: changeLogin 4s infinite alternate;
-}
-
-#null:hover{
-    color: rgb(196, 196, 196);
-    transition: 0.20s;
-    background: linear-gradient(to right, rgb(207, 58, 195), rgb(58, 128, 207));
-    background-size: 400%;
-    animation: changeLogin 2s infinite alternate;
-}
-
 #gamesButton:hover{
     background: rgba(0, 0, 0, 0.28);
     border-radius: 20px;
@@ -114,22 +74,12 @@ a{
     text-shadow: 1px 1px black;
     border: 2px solid white;
 }
-
-@keyframes changeLogin{
-    0%{
-        background-position: left;
-    }
-    100%{
-        background-position: right;
-    }
-}
-
 #videoPlayer{
     border: 0px;
-    border-radius: 20px;
-    
+    border-radius: 20px;    
+    background: black;
+    border: 10px solid rgb(12, 12, 12);
 }
-
 #imageBox1{
     border: 0px;
     border-radius: 20px;
@@ -137,34 +87,31 @@ a{
 #homeLabel{
     text-align: left;
     font-size: 200%;
-    position: absolute;
+    position: relative;
     display: block;
-    transform: translate(10%, -10%);
+    transform: translate(2%, 85%);
 }
 #mainTabs{
     display: block;
     text-align: right;
-    background-color: rgba(26, 26, 26, 0.445);
-    padding: 25px 10px;
+    background-color: rgb(17, 17, 17);
+    padding: 30px 0px;
     height: 100%;
     border: 10px;
+    width: 100%;
     border-radius: 0px;
     position: relative;
-    transform: translate(0%, -10%);
-    
+    transform: translate(0%, -40%);
 }
 model-viewer{
     position: absolute;
     display: block;
     transform: translate(50%,50%);
 }
-
 #downloadButton{
     border: 0px;
     border-radius: 10px;
-    
 }
-
 #iconButton{
     border: 0px;
     border-radius: 20px;
@@ -175,15 +122,13 @@ model-viewer{
    text-align: center;
    margin: 0 auto;
    border: 2px solid white;
-   transform: translate(-0%, -100%);
+   transform: translate(0%, -75%);
    transition: 0.20s;
    font-size: 30px;
 }
 #iconButton:hover{
-    font-size: 35px;
     transition: 0.20s;
-    border: 4px solid greenyellow;
-    width: 7%;
+    border: 2px solid orange;
 }
 #menuButtons{
     font-size: 30px;
@@ -191,26 +136,23 @@ model-viewer{
     transition: 0.20s;
     width: 100%;
     height: 100%;
-    border: 2px solid white;
+    border: 1px solid white;
     position: relative;
-    
 }
-#menuButtons:hover{
-    
+#menuButtons:hover{  
     cursor: pointer;
     border-radius: 20px;
     transition: 0.20s;
     width: 100%;
     height: 100%;
     text-shadow: 1px 1px rgba(10, 10, 10, 0.904);
-    border: 3px solid greenyellow;
+    border: 2px solid orange;
 }
 #socialMedia{
     width: 100%;
     height: 100%;
     text-decoration: none;
-    list-style-type: none;
-    
+    list-style-type: none;  
 }
 #thumbnail1{
     border: 0px;
@@ -235,20 +177,23 @@ model-viewer{
 #thumbnail:hover{
     transition: 0.10s;
     width: 36%;
-   
 }
-
 .flex-container{
     display: flex;
     flex-direction: row;
     flex: 1;
     flex-wrap: wrap;
-
+    align-items: center;
+}
+.flex-social{
+    display: flex;
+    flex: 1 auto;
+    flex-wrap: wrap;
+    align-items: center;
 }
 #copyright{
     position: absolute;
 }
-
 #catagories{
     display: block;
     margin: 0 auto;
@@ -259,5 +204,17 @@ model-viewer{
     border: 0px;
     border-radius: 5px;
     transform: translate(0%, -0%);
-    
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(17, 17, 17);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(37, 37, 37);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(190, 101, 28);
 }
