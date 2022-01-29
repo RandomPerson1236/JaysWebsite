@@ -17,21 +17,45 @@
     $(function(){
         $("#navbar").load("headernav.html")
     }) 
+    function ShowAndHide() {
+    var x = document.getElementById('gameWindow');
+    var y = document.getElementById('errorMobile');
+    if (x.style.display == 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    x.style.display = 'none';
+    y.style.display = 'block';
+    } else {
+    y.style.display = 'none';
+    }
+    }
     </script>
 </head>
 <body>
     
     <div id="navbar"></div>
-
+    <div id="errorMobile" style="color: red; display: none;">Games does not support mobile right now.</div>
     <h1>Games</h1>
 you can play and/or download my <strong>Games</strong> here! (WEB GAMES CANNOT BE DOWNLOADED)
 
 <h3>Games:</h3>
-<div class="">
-    <a href="GamesUnity/ClickObama/ObamaClicker.html">
-    <img src="GamesUnity/ClickObama/thumbnailObamaClicker.png" width="15%" height="20%" alt="obama_clicker_thumb" id="image1"><br>
-    </a>
-    </div>
+
+<div class="obamaClickerGame">
+    <img src="GamesUnity/ClickObama/thumbnailObamaClicker.png" onclick="ShowAndHide()" width="15%" height="20%" alt="obama_clicker_thumb" id="gameThumb"><br>
+</div>
+
+<div class="overlayGame" id="gameWindow" style="display: none;">
+    <form action="">
+        <br><button id="windowPlay" type="submit">Back</button>
+    </form>
+    <div class="overlayGameMain"></div>
+</div>
+
+ </a>
+ </div>
 
 <h4>Copyright&copy;2021<h4>
 

@@ -7,6 +7,8 @@
     <title>Home</title>
     <link rel="stylesheet" href="https://randomperson1236.github.io/JToastieHub/css-scripts/style.css">
     <link rel="stylesheet" href="/css-scripts/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="icon" href="obamasexy.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script
@@ -18,6 +20,15 @@
     $(function(){
         $("#navbar").load("headernav.html")
     }) 
+    
+    function ShowAndHide() {
+    var x = document.getElementById('test');
+    if (x.style.display == 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+    }
     </script>
 
 </head>
@@ -32,20 +43,26 @@
 
     <br><h2>Some of my Work</h2>
     <div class="flex-container">
-    <img src="Images/blendervube.jpg" width="25%" height="100%" alt="image_Duck" id="image1"><br>
-    <img src="Images/DonutStore.jpg" width="49%" height="100%" alt="image_Duck" id="image1"><br>
-    <img src="Images/blendervube.jpg" width="25%" height="100%" alt="image_Duck" id="image1"><br>
+    <img src="Images/blendervube.jpg" width="30%" height="100%" alt="image_Duck" id="image1"><br>
+    <img src="Images/DonutStore.jpg" width="39%" height="100%" alt="image_Duck" id="image1"><br>
+    <img src="Images/blendervube.jpg" width="30%" height="100%" alt="image_Duck" id="image1"><br>
     </div>
     <br><a href="about.html" id="gamesButton">About</a>
     <a href="news.html" id="gamesButton">Latest News</a>
     <a href="https://poly.pizza/u/J-Toastie" id = "gamesButton" >My Poly Pizza</i></a>
-    
+    <h1>NEW</h1>
+
+    <img src="GamesUnity/ClickObama/thumbnailObamaClicker.png" width="20%" height="50%" alt="image_Duck" id=""><br>
+    <form action="GamesUnity/ClickObama/ObamaClicker.html">
+        <br><button id="newButton" type="submit">PLAY NOW</button>
+    </form>
+
     <h1>Social Media</h1>
     <br><li id="socialMedia">
-    <div class="flex-social">
+    
     <br><a href="https://www.youtube.com/channel/UCBFjdNlRe_qfZp8WRDcecrg" id = "iconButton" ><i class="fa fa-youtube"></i></a>
     <br><a href="https://www.instagram.com/jtoastielad/" id = "iconButton" ><i class="fa fa-instagram"></i></a>
-    </div>
+    
     </li>
     <h3><a href="#mainTabs" id="gamesButton">Back To Top</a></h3>
     <h4>Copyright&copy;2021<h4>
