@@ -11,37 +11,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="icon" href="obamasexy.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="navbarOverlay.js"></script>
+    <style>
+    #mainTabs{
+        transform: translate(-1%, -400%);
+    }
+    </style>
     <script
     src="https://code.jquery.com/jquery-3.6.0.js"
     integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
-
+    
     <script>
     $(function(){
         $("#navbar").load("headernav.html")
     }) 
-    
-    function ShowAndHide() {
-    var x = document.getElementById('test');
-    if (x.style.display == 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
-    }
     </script>
-
+    
 </head>
 <body>
-
+    <div class="img-container" id="top">
+        <div class="innerBanner">
+            Welcome
+            <p style="font-size: 25px;">
+            here you can download my scripts, demos and play my games!</p>
+            <form action="#bottom"><button id="menuNavButton" type="submit"><i class="fa fa-angle-down"></i></button></form>
+        </div>
+    </div>
 <nav>
     <div id="navbar"></div>
     <div class="wrapper">
     <h2 id="homeLabel"></h2>
-    <img src="Images/BannerSkinny.png" width="100%" height="100%" alt="Banner" id="banner"><br>
-    <h3>Yoo welcome to my website where you can download my stuff free!</h3>
 
-    <br><h2>Some of my Work</h2>
+    <br><h2 style="text-decoration: underline;">Some of my Work</h2>
     <div class="flex-container">
     <img src="Images/blendervube.jpg" width="30%" height="100%" alt="image_Duck" id="image1"><br>
     <img src="Images/DonutStore.jpg" width="39%" height="100%" alt="image_Duck" id="image1"><br>
@@ -50,6 +52,7 @@
     <br><a href="about.html" id="gamesButton">About</a>
     <a href="news.html" id="gamesButton">Latest News</a>
     <a href="https://poly.pizza/u/J-Toastie" id = "gamesButton" >My Poly Pizza</i></a>
+    <form action="" style="padding-top: 25px;"><button id="menuNavButton" type="submit" onclick="" ><i class="fa fa-lock"></i></button></form>
     <h1>NEW</h1>
 
     <img src="GamesUnity/ClickObama/thumbnailObamaClicker.png" width="20%" height="50%" alt="image_Duck" id=""><br>
@@ -64,8 +67,9 @@
     <br><a href="https://www.instagram.com/jtoastielad/" id = "iconButton" ><i class="fa fa-instagram"></i></a>
     
     </li>
-    <h3><a href="#mainTabs" id="gamesButton">Back To Top</a></h3>
-    <h4>Copyright&copy;2021<h4>
+    <form action="#top"><button id="menuNavButton" type="submit"><i class="fa fa-angle-up"></i></button></form>
+    
+    <h4 id="bottom">Copyright&copy;2021<h4>
     </div>
 </nav>
 
