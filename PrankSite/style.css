@@ -1,0 +1,31 @@
+:root{
+    --editor-height: 300px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.script-preview{
+    width: 200px;
+    height: var(--editor-height);
+    border: 2px solid black;
+    word-wrap: break-word;
+    padding: 5px;
+    background-color: hsl(220,50%,15%);
+    color: white;
+}
+.number-line-count{
+    width: 20px;
+    height: calc(var(--editor-height) + 14px);
+    display: block;
+    background-color: hsl(220,50%,10%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 2px;
+    top: 50px;
+    left: -12px;
+}
+.number-line-count > *::after{
+    content: '.';
+}
