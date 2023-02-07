@@ -1,13 +1,13 @@
 :root{
     --editor-height: 300px;
+    --editor-width: 500px;
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
 .script-preview{
-    width: 500px;
+    width: var(--editor-width);
     height: var(--editor-height);
-    border: 2px solid black;
     word-wrap: break-word;
     padding: 5px;
     background-color: hsl(220,50%,15%);
@@ -15,6 +15,7 @@ body{
     border-left: 10px solid hsl(220,50%,12%);
     line-height: 16px;
     overflow: auto;
+    scroll-behavior: smooth;
 }
 .token-tp1{
     color: #ff6666;

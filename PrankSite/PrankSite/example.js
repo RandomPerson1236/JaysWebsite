@@ -15,6 +15,7 @@ $(()=>{
         'getElementByTagName', 'join', 'log'
     ];
 
+    const code_area = document.querySelector('.code-area');
     let data = null;
 
     function trigger_syntax(){
@@ -23,23 +24,16 @@ $(()=>{
                 if (el.children[i].tagName = 'code'){
                     data = el.children[i].innerHTML;
 
-                    if (el.classList.contains('fill-spaces')){
-                        data = data.replace(/  /g, '<span class="token-empty-space">•</span>')
+                    if (code_area.classList.contains('fill-spaces')){
+                        code_area.innerHTML = code_area.innerHTML.replace(/  /g, '<span class="token-empty-space">•</span>')
                     }
 
                     data = data.replace(/'(.*?)'/g, '<span class="token-string">&apos;$1&apos;</span>');
 
                     types_1.forEach(type1 =>{
                         
-                        let reg_string = new RegExp("'" + type1 + "'", 'g')
-                        console.log(reg_string)
-                        data = data.replace(reg_string, `<span class="token-string">${type1}-</span>`);
-
-                        if (type1 != "'"+type1+"'"){
-                            console.log(type1.indexOf())
-                            let reg = new RegExp(type1, 'g')
-                            data = data.replace(reg, `<span class="token-tp1">${type1}</span>`);
-                        }
+                        let reg = new RegExp(type1, 'g')
+                        data = data.replace(reg, `<span class="token-tp1">${type1}</span>`);
 
                     });
 
@@ -54,6 +48,26 @@ $(()=>{
                 }
             }
         });
+
+        let active_spacing = false;
+
+        document.querySelector('#add-spacing-btn').addEventListener('click', e =>{
+            let ev = e.event || window.event
+
+            if (!active_spacing){
+                if (ev.target.parentElement.parentElement.classList.contains('script-preview')
+                &&
+                ev.target.parentElement.parentElement.classList.contains('js-m')){
+
+                code_area.classList.add('fill-spaces');
+
+                trigger_syntax();
+
+                active_spacing = !active_spacing;
+            }
+            }
+        });
+
     }
     trigger_syntax();
 })
