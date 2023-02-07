@@ -1,0 +1,33 @@
+:root{
+    --editor-height: 300px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.script-preview{
+    width: 500px;
+    height: var(--editor-height);
+    border: 2px solid black;
+    word-wrap: break-word;
+    padding: 5px;
+    background-color: hsl(220,50%,15%);
+    color: white;
+    border-left: 10px solid hsl(220,50%,12%);
+    line-height: 16px;
+    overflow: auto;
+}
+.token-tp1{
+    color: #ff6666;
+}
+.token-tp2{
+    color: #66a8ff;
+}
+.token-string{
+    color: #b6fcd5;
+}
+.token-empty-space{
+    color: hsla(207, 49%, 47%, 0.075);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
