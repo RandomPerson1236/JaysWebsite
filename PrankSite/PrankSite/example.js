@@ -12,7 +12,7 @@ $(()=>{
         'forEach', 'querySelectorAll',
         'querySelector',
         'getElementById', 'getElementbyClassName',
-        'getElementByTagName', 'join'
+        'getElementByTagName', 'join', 'log'
     ];
 
     let data = null;
@@ -30,9 +30,16 @@ $(()=>{
                     data = data.replace(/'(.*?)'/g, '<span class="token-string">&apos;$1&apos;</span>');
 
                     types_1.forEach(type1 =>{
+                        
+                        let reg_string = new RegExp("'" + type1 + "'", 'g')
+                        console.log(reg_string)
+                        data = data.replace(reg_string, `<span class="token-string">${type1}-</span>`);
 
-                        let reg = new RegExp(type1, 'g')
-                        data = data.replace(reg, `<span class="token-tp1">${type1}</span>`);
+                        if (type1 != "'"+type1+"'"){
+                            console.log(type1.indexOf())
+                            let reg = new RegExp(type1, 'g')
+                            data = data.replace(reg, `<span class="token-tp1">${type1}</span>`);
+                        }
 
                     });
 
